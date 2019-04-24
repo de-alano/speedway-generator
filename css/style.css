@@ -109,29 +109,45 @@ body {
   .team__riders {
     padding: 8rem 0;
     background-color: #dfe6e9; }
-    .team__riders input {
-      display: inline-block;
-      width: 60%;
-      padding: 2rem 3rem;
-      font-size: 2.3rem;
-      font-family: 'Montserrat', sans-serif;
-      color: #4b6584;
-      border: 2px solid #a5b1c2;
-      transition: all .2s ease-in; }
-      .team__riders input:not(:last-child) {
-        margin-bottom: 3rem; }
-      .team__riders input:focus {
-        outline: none;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-        border: 2px solid #0fb9b1; }
-      .team__riders input::placeholder {
-        color: rgba(119, 140, 163, 0.5);
-        font-size: 2rem; }
   .team__riders, .team__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+
+.team__rider {
+  width: 100%; }
+  .team__rider:not(:last-child) {
+    margin-bottom: 3rem; }
+  .team__rider__input {
+    display: block;
+    width: 60%;
+    padding: 2rem 3rem;
+    margin: 0 auto;
+    font-size: 2.3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #4b6584;
+    border: 2px solid #a5b1c2;
+    transition: all .2s ease-in; }
+    .team__rider__input:focus {
+      outline: none;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+      border: 2px solid #0fb9b1; }
+    .team__rider__input::placeholder {
+      color: rgba(119, 140, 163, 0.5);
+      font-size: 2rem; }
+  .team__rider__label {
+    font-size: 1.5rem;
+    display: block;
+    color: #0fb9b1;
+    font-weight: bold;
+    margin-top: .8rem;
+    text-align: center;
+    transition: all .3s; }
+  .team__rider__input:placeholder-shown + .team__rider__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
 
 .legal {
   font-size: 1.3rem;
