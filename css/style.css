@@ -15,7 +15,7 @@ body {
 .container {
   max-width: 135rem;
   margin: 0 auto;
-  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
   background-color: #ffffff; }
 
 .header {
@@ -40,8 +40,10 @@ body {
     padding: 3rem 0; }
 
 .generator__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 25vh;
-  line-height: 25vh;
   font-size: 3rem;
   text-align: center;
   background-image: linear-gradient(to right, #2bcbba, #0fb9b1);
@@ -53,7 +55,7 @@ body {
 .generator__btn {
   text-align: center;
   display: block;
-  margin: 0 auto 8rem;
+  margin: 6rem auto;
   background-image: linear-gradient(to right bottom, #2bcbba, #0fb9b1);
   border: none;
   border-radius: 4rem;
@@ -65,10 +67,13 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   transition: all .2s ease-in;
+  transform: scale(1);
+  outline: none;
   cursor: pointer; }
   .generator__btn:hover {
     color: #ffffff;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    transform: scale(1.02); }
 
 .teams {
   display: flex; }
@@ -97,23 +102,24 @@ body {
     transition: all .2s ease-in; }
     .team__input:focus {
       outline: none;
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
       border: 3px solid #2bcbba; }
     .team__input::placeholder {
       color: rgba(119, 140, 163, 0.3); }
   .team__riders {
     padding: 8rem 0;
-    background-color: #ffffff; }
+    background-color: #dfe6e9; }
     .team__riders input {
       display: inline-block;
       width: 60%;
       padding: 2rem 3rem;
-      margin-bottom: 3rem;
       font-size: 2.3rem;
       font-family: 'Montserrat', sans-serif;
       color: #4b6584;
       border: 2px solid #a5b1c2;
       transition: all .2s ease-in; }
+      .team__riders input:not(:last-child) {
+        margin-bottom: 3rem; }
       .team__riders input:focus {
         outline: none;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
@@ -133,6 +139,6 @@ body {
   letter-spacing: .2rem;
   color: #d1d8e0;
   background-color: rgba(75, 101, 132, 0.95);
-  padding: 2rem 0; }
+  padding: 2.5rem 0; }
   .legal .author {
     color: #2bcbba; }
