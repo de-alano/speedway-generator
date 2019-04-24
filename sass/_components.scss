@@ -26,6 +26,12 @@
         text-transform: uppercase;
         letter-spacing: .5rem;
         padding: 3rem 0;
+        line-height: 1.5;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 2.5rem;
+            padding: 3rem;
+        }
     }
 }
 
@@ -43,6 +49,12 @@
         background-clip: text;
         color: transparent;
         letter-spacing: .3rem;
+        line-height: 1.5;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 2.6rem;
+            padding: 0 3rem;
+        }
     }
 
     &__btn {
@@ -108,6 +120,10 @@
 
         transition: all .2s ease-in;
 
+        @media only screen and (max-width: $bp-large) {
+            width: 80%;
+        }
+
         &:focus {
             outline: none;
             box-shadow: $shadow-dark-small;
@@ -148,6 +164,10 @@
         color: $color-grey-dark-2;
         border: 2px solid $color-grey-light-2;
         transition: all .2s ease-in;
+
+        @media only screen and (max-width: $bp-large) {
+            width: 70%;
+        }
 
         &:focus {
             outline: none;

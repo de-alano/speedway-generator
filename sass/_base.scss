@@ -16,6 +16,11 @@ $shadow-dark: 0 2rem 5rem rgba(0,0,0,.3);
 $shadow-dark-small: 0 .5rem 1rem rgba(0,0,0,.3);
 $shadow-light: 0 2rem 4rem rgba(0,0,0,.08);
 
+$bp-large: 75rem; // 1200px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+
+
 * {
     margin: 0;
     padding: 0;
