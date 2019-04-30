@@ -20,16 +20,13 @@ body {
   overflow-x: hidden; }
 
 .header {
-  height: 75vh;
+  height: 100vh;
   width: 100%;
   background-image: url(../images/bg3.jpg);
-  background-position: 0 center;
+  background-position: center;
   background-size: cover;
   position: relative; }
   @media only screen and (max-width: 56.25em) {
-    .header {
-      background-position: center center; } }
-  @media only screen and (max-width: 37.5em) {
     .header {
       background-image: url(../images/bg.jpg); } }
   .header__text {
@@ -59,7 +56,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 25vh;
+  padding: 8rem 0;
   font-size: 3rem;
   text-align: center;
   background-image: linear-gradient(to right, #2bcbba, #0fb9b1);
@@ -71,7 +68,7 @@ body {
   @media only screen and (max-width: 56.25em) {
     .generator__title {
       font-size: 2.2rem;
-      padding: 0 3rem; } }
+      padding: 3rem; } }
   @media only screen and (max-width: 37.5em) {
     .generator__title {
       font-size: 2rem; } }
@@ -159,7 +156,8 @@ body {
     @media only screen and (max-width: 37.5em) {
       .team__input {
         width: 85%;
-        font-size: 2rem; } }
+        font-size: 2rem;
+        padding: 1rem; } }
     .team__input:focus {
       outline: none;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
@@ -169,6 +167,9 @@ body {
   .team__riders {
     padding: 8rem 0;
     background-color: #dfe6e9; }
+    @media only screen and (max-width: 56.25em) {
+      .team__riders {
+        padding: 5rem 0; } }
   .team__riders, .team__info {
     display: flex;
     flex-direction: column;
@@ -178,7 +179,7 @@ body {
 .team__rider {
   width: 100%; }
   .team__rider:not(:last-child) {
-    margin-bottom: 3rem; }
+    margin-bottom: 1.5rem; }
   .team__rider__input {
     display: block;
     width: 60%;
