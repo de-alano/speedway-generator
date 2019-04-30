@@ -16,7 +16,8 @@ body {
   max-width: 135rem;
   margin: 0 auto;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  overflow-x: hidden; }
 
 .header {
   height: 75vh;
@@ -25,6 +26,12 @@ body {
   background-position: 0 center;
   background-size: cover;
   position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      background-position: center center; } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      background-image: url(../images/bg.jpg); } }
   .header__text {
     position: absolute;
     width: 100%;
@@ -32,17 +39,21 @@ body {
     left: 50%;
     transform: translateX(-50%);
     color: #d1d8e0;
-    background-color: rgba(75, 101, 132, 0.8);
+    background-color: rgba(75, 101, 132, 0.9);
     text-align: center;
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: .5rem;
     padding: 3rem 0;
-    line-height: 1.5; }
+    line-height: 1.8; }
     @media only screen and (max-width: 56.25em) {
       .header__text {
         font-size: 2.5rem;
         padding: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__text {
+        font-size: 2rem;
+        padding: 2rem; } }
 
 .generator__title {
   display: flex;
@@ -59,8 +70,11 @@ body {
   line-height: 1.5; }
   @media only screen and (max-width: 56.25em) {
     .generator__title {
-      font-size: 2.6rem;
+      font-size: 2.2rem;
       padding: 0 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .generator__title {
+      font-size: 2rem; } }
 
 .generator__btn {
   text-align: center;
@@ -80,6 +94,16 @@ body {
   transform: scale(1);
   outline: none;
   cursor: pointer; }
+  @media only screen and (max-width: 56.25em) {
+    .generator__btn {
+      color: #ffffff;
+      font-size: 1.5rem;
+      padding: 2.5rem 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .generator__btn {
+      color: #ffffff;
+      font-size: 1.3rem;
+      padding: 2rem 3rem; } }
   .generator__btn:hover {
     color: #ffffff;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
@@ -87,19 +111,33 @@ body {
 
 .teams {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .teams {
+      flex-direction: column; } }
 
 .team {
   width: 50%; }
+  @media only screen and (max-width: 56.25em) {
+    .team {
+      width: 100%; } }
   .team__info {
     padding: 5rem 0 8rem;
-    background-image: linear-gradient(rgba(75, 101, 132, 0.9), rgba(75, 101, 132, 0.95)), url(../images/race.jpg); }
+    background-image: linear-gradient(rgba(75, 101, 132, 0.9), rgba(75, 101, 132, 0.95)), url(../images/race.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; }
   .team__name {
-    font-size: 2.5rem;
-    letter-spacing: .3rem;
+    font-size: 3rem;
+    letter-spacing: .5rem;
     text-transform: uppercase;
     color: #d1d8e0;
     font-weight: bold;
     padding: 3rem 0; }
+    @media only screen and (max-width: 56.25em) {
+      .team__name {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .team__name {
+        font-size: 2rem; } }
   .team__input {
     display: inline-block;
     width: 70%;
@@ -114,6 +152,14 @@ body {
     @media only screen and (max-width: 75rem) {
       .team__input {
         width: 80%; } }
+    @media only screen and (max-width: 56.25em) {
+      .team__input {
+        width: 70%;
+        font-size: 2.2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .team__input {
+        width: 85%;
+        font-size: 2rem; } }
     .team__input:focus {
       outline: none;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
@@ -146,6 +192,12 @@ body {
     @media only screen and (max-width: 75rem) {
       .team__rider__input {
         width: 70%; } }
+    @media only screen and (max-width: 56.25em) {
+      .team__rider__input {
+        font-size: 2.2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .team__rider__input {
+        font-size: 2rem; } }
     .team__rider__input:focus {
       outline: none;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
@@ -153,6 +205,9 @@ body {
     .team__rider__input::placeholder {
       color: rgba(119, 140, 163, 0.5);
       font-size: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .team__rider__input::placeholder {
+          font-size: 1.7rem; } }
   .team__rider__label {
     font-size: 1.5rem;
     display: block;
