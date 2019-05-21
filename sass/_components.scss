@@ -48,15 +48,14 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 1rem 0;
+    padding: 2rem 0;
     width: 100%;
-    // background-color: rgba($color-grey-dark-2, 0.8);
-    animation: moveInBottom 1s ease-out;
 
     &__items {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     &__item {
@@ -64,6 +63,18 @@
         padding: 0;
         list-style-type: none;
         width: 20%;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 25%;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 32%;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 40%;
+        }
     }
 
     &__link {
@@ -78,9 +89,24 @@
             text-align: center;
             background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
             padding: 2rem 1rem;
-            border: 1.5rem solid rgba($color-grey-dark-2, 0.9);
+            border: 1.2rem solid rgba($color-grey-dark-2, 0.9);
             border-radius: 4rem;
             transition: all .2s ease-in;
+            box-sizing: border-box;
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 1.8rem;
+                border: 1rem solid rgba($color-grey-dark-2, 0.9);
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 1.5rem;
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 1.2rem;
+                border: .7rem solid rgba($color-grey-dark-2, 0.9);
+            }
         }
 
         &--ekstraleague {
@@ -89,10 +115,19 @@
 
         &--firstleague {
             animation: moveInBottom 1s ease-out;
+
+            @media only screen and (max-width: $bp-smallest) {
+                animation: moveInRight 1s ease-out;
+            }
         }
 
         &--gp {
             animation: moveInRight 1s ease-out;
+
+            @media only screen and (max-width: $bp-smallest) {
+                margin-top: 1rem;
+                animation: moveInBottom 1s ease-out;
+            }
         }
 
         &:hover {
