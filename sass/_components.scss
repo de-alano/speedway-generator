@@ -9,31 +9,28 @@
 .header {
     height: 100vh;
     width: 100%;
-    background-image: url(../images/bg3.jpg);
+    background-image: url(../images/bg.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
-
-    @media only screen and (max-width: $bp-medium) {
-        background-image: url(../images/bg.jpg);
-    }
-
+    overflow: hidden;
     
 
     &__text {
         position: absolute;
         width: 100%;
-        bottom: 3%;
+        top: 0;
         left: 50%;
         transform: translateX(-50%);
         color: $color-grey-light-1;
-        background-color: rgba($color-grey-dark-2, 0.9);
+        background-color: rgba($color-grey-dark-2, 0.8);
         text-align: center;
         font-size: 3rem;
         text-transform: uppercase;
         letter-spacing: .5rem;
         padding: 3rem 0;
         line-height: 1.8;
+        animation: moveInTop 1s ease-out;
 
         @media only screen and (max-width: $bp-medium) {
             font-size: 2.5rem;
@@ -43,6 +40,65 @@
         @media only screen and (max-width: $bp-small) {
             font-size: 2rem;
             padding: 2rem;
+        }
+    } 
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 1rem 0;
+    width: 100%;
+    // background-color: rgba($color-grey-dark-2, 0.8);
+    animation: moveInBottom 1s ease-out;
+
+    &__items {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__item {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 20%;
+    }
+
+    &__link {
+        &, &:link, &:visited {
+            display: block;
+            color: $color-grey-light-1;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-decoration: none;
+            cursor: pointer;
+            text-align: center;
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            padding: 2rem 1rem;
+            border: 1.5rem solid rgba($color-grey-dark-2, 0.9);
+            border-radius: 4rem;
+            transition: all .2s ease-in;
+        }
+
+        &--ekstraleague {
+            animation: moveInLeft 1s ease-out;
+        }
+
+        &--firstleague {
+            animation: moveInBottom 1s ease-out;
+        }
+
+        &--gp {
+            animation: moveInRight 1s ease-out;
+        }
+
+        &:hover {
+            color: $color-white;
+            box-shadow: $shadow-dark-small;
+            transform: scale(1.02);
         }
     }
 }
