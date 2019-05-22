@@ -72,7 +72,8 @@ function generate(type) {
         });
 }
 
-function generateBlob() {
+function generateBlob(e) {
+    e.preventDefault();
     return generate()
         .then(function (blob) {
             var url = window.URL.createObjectURL(blob);
@@ -86,4 +87,4 @@ function generateBlob() {
         })
 }
 
-document.querySelector('.generator__btn').addEventListener('click', generateBlob);
+document.querySelector('.generator__form').addEventListener('submit', generateBlob);
