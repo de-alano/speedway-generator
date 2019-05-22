@@ -47,7 +47,7 @@ body {
   background-image: linear-gradient(rgba(43, 203, 186, 0.9), rgba(15, 185, 177, 0.9)); }
 
 .container {
-  max-width: 135rem;
+  max-width: 130rem;
   margin: 0 auto;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
   background-color: #ffffff;
@@ -67,8 +67,8 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    color: #d1d8e0;
-    background-color: rgba(75, 101, 132, 0.8);
+    color: #ffffff;
+    background-color: rgba(75, 101, 132, 0.9);
     text-align: center;
     font-size: 3rem;
     text-transform: uppercase;
@@ -79,28 +79,41 @@ body {
     @media only screen and (max-width: 56.25em) {
       .header__text {
         font-size: 2.5rem;
-        padding: 3rem; } }
+        padding: 2rem;
+        line-height: 1.5; } }
     @media only screen and (max-width: 37.5em) {
       .header__text {
         font-size: 2rem;
         padding: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__text {
+        font-size: 1.5rem; } }
 
 .menu {
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 1rem 0;
-  width: 100%;
-  animation: moveInBottom 1s ease-out; }
+  padding: 2rem 0;
+  width: 100%; }
   .menu__items {
     display: flex;
     justify-content: space-evenly;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
   .menu__item {
     margin: 0;
     padding: 0;
     list-style-type: none;
     width: 20%; }
+    @media only screen and (max-width: 56.25em) {
+      .menu__item {
+        width: 25%; } }
+    @media only screen and (max-width: 37.5em) {
+      .menu__item {
+        width: 32%; } }
+    @media only screen and (max-width: 31.25em) {
+      .menu__item {
+        width: 40%; } }
   .menu__link, .menu__link:link, .menu__link:visited {
     display: block;
     color: #d1d8e0;
@@ -112,73 +125,104 @@ body {
     text-align: center;
     background-image: linear-gradient(to right bottom, #2bcbba, #0fb9b1);
     padding: 2rem 1rem;
-    border: 1.5rem solid rgba(75, 101, 132, 0.9);
+    border: 1.2rem solid rgba(75, 101, 132, 0.9);
     border-radius: 4rem;
-    transition: all .2s ease-in; }
+    transition: all .2s ease-in;
+    box-sizing: border-box; }
+    @media only screen and (max-width: 56.25em) {
+      .menu__link, .menu__link:link, .menu__link:visited {
+        font-size: 1.8rem;
+        border: 1rem solid rgba(75, 101, 132, 0.9); } }
+    @media only screen and (max-width: 37.5em) {
+      .menu__link, .menu__link:link, .menu__link:visited {
+        font-size: 1.5rem;
+        border: 0.8rem solid rgba(75, 101, 132, 0.9); } }
+    @media only screen and (max-width: 31.25em) {
+      .menu__link, .menu__link:link, .menu__link:visited {
+        font-size: 1.2rem;
+        border: 0.7rem solid rgba(75, 101, 132, 0.9); } }
   .menu__link--ekstraleague {
     animation: moveInLeft 1s ease-out; }
   .menu__link--firstleague {
     animation: moveInBottom 1s ease-out; }
+    @media only screen and (max-width: 31.25em) {
+      .menu__link--firstleague {
+        animation: moveInRight 1s ease-out; } }
   .menu__link--gp {
     animation: moveInRight 1s ease-out; }
+    @media only screen and (max-width: 31.25em) {
+      .menu__link--gp {
+        margin-top: 1rem;
+        animation: moveInBottom 1s ease-out; } }
   .menu__link:hover {
     color: #ffffff;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
     transform: scale(1.02); }
 
-.generator__title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8rem 0;
-  font-size: 3rem;
-  text-align: center;
-  background-image: linear-gradient(to right, #2bcbba, #0fb9b1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: .3rem;
-  line-height: 1.5; }
-  @media only screen and (max-width: 56.25em) {
-    .generator__title {
-      font-size: 2.2rem;
-      padding: 3rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .generator__title {
-      font-size: 2rem; } }
-
-.generator__btn {
-  text-align: center;
-  display: block;
-  margin: 6rem auto;
-  background-image: linear-gradient(to right bottom, #2bcbba, #0fb9b1);
-  border: none;
-  border-radius: 4rem;
-  padding: 3rem 5rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 0.3rem;
-  color: #d1d8e0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  transition: all .2s ease-in;
-  transform: scale(1);
-  outline: none;
-  cursor: pointer; }
-  @media only screen and (max-width: 56.25em) {
-    .generator__btn {
+.generator {
+  background-color: #ffffff; }
+  .generator__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 2rem;
+    font-size: 3rem;
+    text-align: center;
+    background-image: linear-gradient(to right, #2bcbba, #0fb9b1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: .3rem;
+    line-height: 1.5; }
+    @media only screen and (max-width: 75rem) {
+      .generator__title {
+        font-size: 2.8rem;
+        padding: 6rem 2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .generator__title {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .generator__title {
+        font-size: 2rem;
+        padding: 4rem 1.5rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .generator__title {
+        font-size: 1.6rem;
+        padding: 4rem 1.5rem; } }
+  .generator__btn {
+    text-align: center;
+    display: block;
+    margin: 6rem auto;
+    background-image: linear-gradient(to right bottom, #2bcbba, #0fb9b1);
+    border: none;
+    border-radius: 4rem;
+    padding: 3rem 5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    color: #d1d8e0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    transition: all .2s ease-in;
+    transform: scale(1);
+    outline: none;
+    cursor: pointer; }
+    @media only screen and (max-width: 56.25em) {
+      .generator__btn {
+        color: #ffffff;
+        font-size: 1.5rem;
+        padding: 2rem 3rem;
+        margin: 4rem auto; } }
+    @media only screen and (max-width: 37.5em) {
+      .generator__btn {
+        color: #ffffff;
+        font-size: 1.3rem;
+        padding: 2rem 2.5rem;
+        margin: 3rem auto; } }
+    .generator__btn:hover {
       color: #ffffff;
-      font-size: 1.5rem;
-      padding: 2.5rem 4rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .generator__btn {
-      color: #ffffff;
-      font-size: 1.3rem;
-      padding: 2rem 3rem; } }
-  .generator__btn:hover {
-    color: #ffffff;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-    transform: scale(1.02); }
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+      transform: scale(1.02); }
 
 .teams {
   display: flex; }
@@ -196,6 +240,9 @@ body {
     background-image: linear-gradient(rgba(75, 101, 132, 0.9), rgba(75, 101, 132, 0.95)), url(../images/race.jpg);
     background-repeat: no-repeat;
     background-size: cover; }
+    @media only screen and (max-width: 37.5em) {
+      .team__info {
+        padding: 2rem 0 5rem; } }
   .team__name {
     font-size: 3rem;
     letter-spacing: .5rem;
@@ -203,6 +250,9 @@ body {
     color: #d1d8e0;
     font-weight: bold;
     padding: 3rem 0; }
+    @media only screen and (max-width: 75rem) {
+      .team__name {
+        font-size: 2.7rem; } }
     @media only screen and (max-width: 56.25em) {
       .team__name {
         font-size: 2.5rem; } }
@@ -222,28 +272,51 @@ body {
     transition: all .2s ease-in; }
     @media only screen and (max-width: 75rem) {
       .team__input {
-        width: 80%; } }
+        width: 80%;
+        font-size: 2.2rem; } }
     @media only screen and (max-width: 56.25em) {
       .team__input {
-        width: 70%;
-        font-size: 2.2rem; } }
+        width: 60%;
+        font-size: 2rem; } }
     @media only screen and (max-width: 37.5em) {
       .team__input {
-        width: 85%;
-        font-size: 2rem;
+        width: 80%;
+        font-size: 1.8rem;
         padding: 1rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .team__input {
+        font-size: 1.6rem; } }
     .team__input:focus {
       outline: none;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
       border: 3px solid #2bcbba; }
     .team__input::placeholder {
-      color: rgba(119, 140, 163, 0.3); }
+      color: rgba(119, 140, 163, 0.3);
+      font-size: 2.5rem; }
+      @media only screen and (max-width: 75rem) {
+        .team__input::placeholder {
+          font-size: 2.2rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .team__input::placeholder {
+          font-size: 2rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .team__input::placeholder {
+          font-size: 1.8rem; } }
+      @media only screen and (max-width: 31.25em) {
+        .team__input::placeholder {
+          font-size: 1.6rem; } }
   .team__riders {
     padding: 8rem 0;
     background-color: #dfe6e9; }
+    @media only screen and (max-width: 75rem) {
+      .team__riders {
+        padding: 6rem 0; } }
     @media only screen and (max-width: 56.25em) {
       .team__riders {
         padding: 5rem 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .team__riders {
+        padding: 3.5rem 0; } }
   .team__riders, .team__info {
     display: flex;
     flex-direction: column;
@@ -254,6 +327,12 @@ body {
   width: 100%; }
   .team__rider:not(:last-child) {
     margin-bottom: 1.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .team__rider:not(:last-child) {
+        margin-bottom: 1.2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .team__rider:not(:last-child) {
+        margin-bottom: 1rem; } }
   .team__rider__input {
     display: block;
     width: 60%;
@@ -266,13 +345,25 @@ body {
     transition: all .2s ease-in; }
     @media only screen and (max-width: 75rem) {
       .team__rider__input {
-        width: 70%; } }
+        width: 70%;
+        padding: 1.8rem 3rem;
+        font-size: 2rem; } }
     @media only screen and (max-width: 56.25em) {
       .team__rider__input {
-        font-size: 2.2rem; } }
+        font-size: 1.8rem;
+        text-align: center;
+        width: 60%;
+        padding: 1.5rem 3rem; } }
     @media only screen and (max-width: 37.5em) {
       .team__rider__input {
-        font-size: 2rem; } }
+        font-size: 1.6rem;
+        width: 70%;
+        padding: 1.3rem 3rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .team__rider__input {
+        font-size: 1.4rem;
+        width: 70%;
+        padding: 1rem 3rem; } }
     .team__rider__input:focus {
       outline: none;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
@@ -280,9 +371,15 @@ body {
     .team__rider__input::placeholder {
       color: rgba(119, 140, 163, 0.5);
       font-size: 2rem; }
+      @media only screen and (max-width: 56.25em) {
+        .team__rider__input::placeholder {
+          font-size: 1.8rem; } }
       @media only screen and (max-width: 37.5em) {
         .team__rider__input::placeholder {
-          font-size: 1.7rem; } }
+          font-size: 1.6rem; } }
+      @media only screen and (max-width: 31.25em) {
+        .team__rider__input::placeholder {
+          font-size: 1.4rem; } }
   .team__rider__label {
     font-size: 1.5rem;
     display: block;
@@ -291,17 +388,31 @@ body {
     margin-top: .8rem;
     text-align: center;
     transition: all .3s; }
+    @media only screen and (max-width: 56.25em) {
+      .team__rider__label {
+        font-size: 1.3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .team__rider__label {
+        font-size: 1.2rem; } }
   .team__rider__input:placeholder-shown + .team__rider__label {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem); }
 
 .legal {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-align: center;
   letter-spacing: .2rem;
   color: #d1d8e0;
   background-color: rgba(75, 101, 132, 0.95);
-  padding: 2.5rem 0; }
+  padding: 3rem 0;
+  line-height: 1.6; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      font-size: 1.3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .legal {
+      font-size: 1.2rem;
+      padding: 2rem; } }
   .legal .author {
     color: #2bcbba; }
