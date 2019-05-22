@@ -1,5 +1,5 @@
 .container {
-    max-width: 135rem;
+    max-width: 130rem;
     margin: 0 auto;
     box-shadow: $shadow-dark;
     background-color: $color-white;
@@ -22,8 +22,8 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        color: $color-grey-light-1;
-        background-color: rgba($color-grey-dark-2, 0.8);
+        color: $color-white;
+        background-color: rgba($color-grey-dark-2, 0.9);
         text-align: center;
         font-size: 3rem;
         text-transform: uppercase;
@@ -34,12 +34,17 @@
 
         @media only screen and (max-width: $bp-medium) {
             font-size: 2.5rem;
-            padding: 3rem;
+            padding: 2rem;
+            line-height: 1.5;
         }
 
         @media only screen and (max-width: $bp-small) {
             font-size: 2rem;
             padding: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
         }
     } 
 }
@@ -101,6 +106,7 @@
 
             @media only screen and (max-width: $bp-small) {
                 font-size: 1.5rem;
+                border: .8rem solid rgba($color-grey-dark-2, 0.9);
             }
 
             @media only screen and (max-width: $bp-smallest) {
@@ -139,12 +145,14 @@
 }
 
 .generator {
+
+    background-color: $color-white;
     
     &__title {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 8rem 0;
+        padding: 8rem 2rem;
         font-size: 3rem;
         text-align: center;
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
@@ -154,13 +162,23 @@
         letter-spacing: .3rem;
         line-height: 1.5;
 
+        @media only screen and (max-width: $bp-large) {
+            font-size: 2.8rem;
+            padding: 6rem 2rem;
+        }
+
         @media only screen and (max-width: $bp-medium) {
-            font-size: 2.2rem;
-            padding: 3rem;
+            font-size: 2.5rem;
         }
 
         @media only screen and (max-width: $bp-small) {
             font-size: 2rem;
+            padding: 4rem 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.6rem;
+            padding: 4rem 1.5rem;
         }
     }
 
@@ -186,13 +204,15 @@
         @media only screen and (max-width: $bp-medium) {
             color: $color-white;
             font-size: 1.5rem;
-            padding: 2.5rem 4rem;
+            padding: 2rem 3rem;
+            margin: 4rem auto;
         }
 
         @media only screen and (max-width: $bp-small) {
             color: $color-white;
             font-size: 1.3rem;
-            padding: 2rem 3rem;
+            padding: 2rem 2.5rem;
+            margin: 3rem auto;
         }
 
 
@@ -225,6 +245,10 @@
         background-image: linear-gradient(rgba($color-grey-dark-2, .9), rgba($color-grey-dark-2, .95)), url(../images/race.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 2rem 0 5rem;
+        }
     }
 
     &__name {
@@ -234,6 +258,10 @@
         color: $color-grey-light-1;
         font-weight: bold;
         padding: 3rem 0;
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 2.7rem;
+        }
 
         @media only screen and (max-width: $bp-medium) {
             font-size: 2.5rem;
@@ -260,17 +288,22 @@
 
         @media only screen and (max-width: $bp-large) {
             width: 80%;
-        }
-
-        @media only screen and (max-width: $bp-medium) {
-            width: 70%;
             font-size: 2.2rem;
         }
 
-        @media only screen and (max-width: $bp-small) {
-            width: 85%;
+        @media only screen and (max-width: $bp-medium) {
+            width: 60%;
             font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 80%;
+            font-size: 1.8rem;
             padding: 1rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.6rem;
         }
 
         &:focus {
@@ -281,6 +314,23 @@
 
         &::placeholder {
             color: rgba($color-grey-dark-1, .3);
+            font-size: 2.5rem;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 2.2rem;
+            }
+    
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 2rem;
+            }
+    
+            @media only screen and (max-width: $bp-small) {
+                font-size: 1.8rem;
+            }
+    
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 1.6rem;
+            }
         }
     }
 
@@ -288,8 +338,16 @@
         padding: 8rem 0;
         background-color: $color-grey-light-3;
 
+        @media only screen and (max-width: $bp-large) {
+            padding: 6rem 0;
+        }
+
         @media only screen and (max-width: $bp-medium) {
             padding: 5rem 0;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 3.5rem 0;
         }
 
     }
@@ -305,7 +363,17 @@
 .team__rider {
     width: 100%;
 
-    &:not(:last-child) {margin-bottom: 1.5rem;}
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-bottom: 1.2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            margin-bottom: 1rem;
+        }
+    }
 
     &__input {
         display: block;
@@ -320,15 +388,28 @@
 
         @media only screen and (max-width: $bp-large) {
             width: 70%;
+            padding: 1.8rem 3rem;
+            font-size: 2rem;
         }
 
         
         @media only screen and (max-width: $bp-medium) {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
+            text-align: center;
+            width: 60%;
+            padding: 1.5rem 3rem;
         }
 
         @media only screen and (max-width: $bp-small) {
-            font-size: 2rem;
+            font-size: 1.6rem;
+            width: 70%;
+            padding: 1.3rem 3rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.4rem;
+            width: 70%;
+            padding: 1rem 3rem;
         }
 
 
@@ -342,8 +423,16 @@
             color: rgba($color-grey-dark-1, .5);
             font-size: 2rem;
 
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 1.8rem;
+            }
+
             @media only screen and (max-width: $bp-small) {
-                font-size: 1.7rem;
+                font-size: 1.6rem;
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 1.4rem;
             }
         }
 
@@ -357,6 +446,14 @@
         margin-top: .8rem;
         text-align: center;
         transition: all .3s;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.3rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.2rem;
+        }
     }
 
     &__input:placeholder-shown + &__label {
@@ -368,12 +465,22 @@
 }
 
 .legal {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         text-align: center;
         letter-spacing: .2rem;
         color: $color-grey-light-1;
         background-color: rgba($color-grey-dark-2, .95);
-        padding: 2.5rem 0;
+        padding: 3rem 0;
+        line-height: 1.6;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.3rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.2rem;
+            padding: 2rem;
+        }
 
         .author {
             color: $color-primary-light;
