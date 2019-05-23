@@ -124,7 +124,9 @@ body {
     text-decoration: none;
     cursor: pointer;
     text-align: center;
-    background-image: linear-gradient(to right bottom, #2bcbba, #0fb9b1);
+    background-image: linear-gradient(rgba(75, 101, 132, 0.9), rgba(75, 101, 132, 0.95)), url(../images/race.jpg);
+    background-size: cover;
+    background-position: center;
     padding: 2rem 1rem;
     border: 1.2rem solid rgba(75, 101, 132, 0.9);
     border-radius: 4rem;
@@ -142,6 +144,8 @@ body {
       .menu__link, .menu__link:link, .menu__link:visited {
         font-size: 1.2rem;
         border: 0.7rem solid rgba(75, 101, 132, 0.9); } }
+  .menu__link {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
   .menu__link--ekstraleague {
     animation: moveInLeft 1s ease-out; }
   .menu__link--firstleague {
@@ -236,76 +240,6 @@ body {
   @media only screen and (max-width: 56.25em) {
     .team {
       width: 100%; } }
-  .team__info {
-    padding: 5rem 0 8rem;
-    background-image: linear-gradient(rgba(75, 101, 132, 0.9), rgba(75, 101, 132, 0.95)), url(../images/race.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; }
-    @media only screen and (max-width: 37.5em) {
-      .team__info {
-        padding: 2rem 0 5rem; } }
-  .team__name {
-    font-size: 3rem;
-    letter-spacing: .5rem;
-    text-transform: uppercase;
-    color: #d1d8e0;
-    font-weight: bold;
-    padding: 3rem 0; }
-    @media only screen and (max-width: 75rem) {
-      .team__name {
-        font-size: 2.7rem; } }
-    @media only screen and (max-width: 56.25em) {
-      .team__name {
-        font-size: 2.5rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .team__name {
-        font-size: 2rem; } }
-  .team__input {
-    display: inline-block;
-    width: 70%;
-    padding: 2rem 1rem;
-    font-family: 'Montserrat', sans-serif;
-    color: #0fb9b1;
-    text-align: center;
-    font-size: 2.5rem;
-    border: 3px solid transparent;
-    border-radius: 5rem;
-    transition: all .2s ease-in; }
-    @media only screen and (max-width: 75rem) {
-      .team__input {
-        width: 80%;
-        font-size: 2.2rem; } }
-    @media only screen and (max-width: 56.25em) {
-      .team__input {
-        width: 60%;
-        font-size: 2rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .team__input {
-        width: 80%;
-        font-size: 1.8rem;
-        padding: 1rem; } }
-    @media only screen and (max-width: 31.25em) {
-      .team__input {
-        font-size: 1.6rem; } }
-    .team__input:focus {
-      outline: none;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-      border: 3px solid #2bcbba; }
-    .team__input::placeholder {
-      color: rgba(119, 140, 163, 0.3);
-      font-size: 2.5rem; }
-      @media only screen and (max-width: 75rem) {
-        .team__input::placeholder {
-          font-size: 2.2rem; } }
-      @media only screen and (max-width: 56.25em) {
-        .team__input::placeholder {
-          font-size: 2rem; } }
-      @media only screen and (max-width: 37.5em) {
-        .team__input::placeholder {
-          font-size: 1.8rem; } }
-      @media only screen and (max-width: 31.25em) {
-        .team__input::placeholder {
-          font-size: 1.6rem; } }
   .team__riders {
     padding: 8rem 0;
     background-color: #dfe6e9; }
@@ -334,53 +268,6 @@ body {
     @media only screen and (max-width: 37.5em) {
       .team__rider:not(:last-child) {
         margin-bottom: 1rem; } }
-  .team__rider__input {
-    display: block;
-    width: 60%;
-    padding: 2rem 3rem;
-    margin: 0 auto;
-    font-size: 2.3rem;
-    font-family: 'Montserrat', sans-serif;
-    color: #4b6584;
-    border: 2px solid #a5b1c2;
-    transition: all .2s ease-in; }
-    @media only screen and (max-width: 75rem) {
-      .team__rider__input {
-        width: 70%;
-        padding: 1.8rem 3rem;
-        font-size: 2rem; } }
-    @media only screen and (max-width: 56.25em) {
-      .team__rider__input {
-        font-size: 1.8rem;
-        text-align: center;
-        width: 60%;
-        padding: 1.5rem 3rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .team__rider__input {
-        font-size: 1.6rem;
-        width: 70%;
-        padding: 1.3rem 3rem; } }
-    @media only screen and (max-width: 31.25em) {
-      .team__rider__input {
-        font-size: 1.4rem;
-        width: 70%;
-        padding: 1rem 3rem; } }
-    .team__rider__input:focus {
-      outline: none;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-      border: 2px solid #0fb9b1; }
-    .team__rider__input::placeholder {
-      color: rgba(119, 140, 163, 0.5);
-      font-size: 2rem; }
-      @media only screen and (max-width: 56.25em) {
-        .team__rider__input::placeholder {
-          font-size: 1.8rem; } }
-      @media only screen and (max-width: 37.5em) {
-        .team__rider__input::placeholder {
-          font-size: 1.6rem; } }
-      @media only screen and (max-width: 31.25em) {
-        .team__rider__input::placeholder {
-          font-size: 1.4rem; } }
   .team__rider__label {
     font-size: 1.5rem;
     display: block;
@@ -417,3 +304,169 @@ body {
       padding: 2rem; } }
   .legal .author {
     color: #2bcbba; }
+
+.gp__info {
+  text-align: center; }
+
+.gp__riders {
+  padding: 8rem 0;
+  background-color: #dfe6e9; }
+  @media only screen and (max-width: 75rem) {
+    .gp__riders {
+      padding: 6rem 0; } }
+  @media only screen and (max-width: 56.25em) {
+    .gp__riders {
+      padding: 5rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .gp__riders {
+      padding: 3.5rem 0; } }
+
+.gp__rider:not(:last-child) {
+  margin-bottom: 1.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .gp__rider:not(:last-child) {
+      margin-bottom: 1.2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .gp__rider:not(:last-child) {
+      margin-bottom: 1rem; } }
+
+.gp__rider__label {
+  font-size: 1.5rem;
+  display: block;
+  color: #0fb9b1;
+  font-weight: bold;
+  margin-top: .8rem;
+  text-align: center;
+  transition: all .3s; }
+  @media only screen and (max-width: 56.25em) {
+    .gp__rider__label {
+      font-size: 1.3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .gp__rider__label {
+      font-size: 1.2rem; } }
+
+.gp__rider__input:placeholder-shown + .gp__rider__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.team__info, .gp__info {
+  padding: 5rem 0 8rem;
+  background-image: linear-gradient(rgba(75, 101, 132, 0.9), rgba(75, 101, 132, 0.95)), url(../images/race.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media only screen and (max-width: 37.5em) {
+    .team__info, .gp__info {
+      padding: 2rem 0 5rem; } }
+
+.team__name, .gp__name {
+  font-size: 3rem;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  color: #d1d8e0;
+  font-weight: bold;
+  padding: 3rem 0; }
+  @media only screen and (max-width: 75rem) {
+    .team__name, .gp__name {
+      font-size: 2.7rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .team__name, .gp__name {
+      font-size: 2.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .team__name, .gp__name {
+      font-size: 2rem; } }
+
+.team__input, .gp__input {
+  display: inline-block;
+  width: 70%;
+  padding: 2rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #0fb9b1;
+  text-align: center;
+  font-size: 2.5rem;
+  border: 3px solid transparent;
+  border-radius: 5rem;
+  transition: all .2s ease-in; }
+  @media only screen and (max-width: 75rem) {
+    .team__input, .gp__input {
+      width: 80%;
+      font-size: 2.2rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .team__input, .gp__input {
+      width: 60%;
+      font-size: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .team__input, .gp__input {
+      width: 80%;
+      font-size: 1.8rem;
+      padding: 1rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .team__input, .gp__input {
+      font-size: 1.6rem; } }
+  .team__input:focus, .gp__input:focus {
+    outline: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    border: 3px solid #2bcbba; }
+  .team__input::placeholder, .gp__input::placeholder {
+    color: rgba(119, 140, 163, 0.3);
+    font-size: 2.5rem; }
+    @media only screen and (max-width: 75rem) {
+      .team__input::placeholder, .gp__input::placeholder {
+        font-size: 2.2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .team__input::placeholder, .gp__input::placeholder {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .team__input::placeholder, .gp__input::placeholder {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .team__input::placeholder, .gp__input::placeholder {
+        font-size: 1.6rem; } }
+
+.team__rider__input, .gp__rider__input {
+  display: block;
+  width: 60%;
+  padding: 2rem 3rem;
+  margin: 0 auto;
+  font-size: 2.3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #4b6584;
+  border: 2px solid #a5b1c2;
+  transition: all .2s ease-in; }
+  @media only screen and (max-width: 75rem) {
+    .team__rider__input, .gp__rider__input {
+      width: 70%;
+      padding: 1.8rem 3rem;
+      font-size: 2rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .team__rider__input, .gp__rider__input {
+      font-size: 1.8rem;
+      text-align: center;
+      width: 60%;
+      padding: 1.5rem 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .team__rider__input, .gp__rider__input {
+      font-size: 1.6rem;
+      width: 70%;
+      padding: 1.3rem 3rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .team__rider__input, .gp__rider__input {
+      font-size: 1.4rem;
+      width: 70%;
+      padding: 1rem 3rem; } }
+  .team__rider__input:focus, .gp__rider__input:focus {
+    outline: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    border: 2px solid #0fb9b1; }
+  .team__rider__input::placeholder, .gp__rider__input::placeholder {
+    color: rgba(119, 140, 163, 0.5);
+    font-size: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .team__rider__input::placeholder, .gp__rider__input::placeholder {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .team__rider__input::placeholder, .gp__rider__input::placeholder {
+        font-size: 1.6rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .team__rider__input::placeholder, .gp__rider__input::placeholder {
+        font-size: 1.4rem; } }
