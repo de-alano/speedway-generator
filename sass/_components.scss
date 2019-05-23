@@ -93,7 +93,9 @@
             text-decoration: none;
             cursor: pointer;
             text-align: center;
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            background-image: linear-gradient(rgba($color-grey-dark-2, .9), rgba($color-grey-dark-2, .95)), url(../images/race.jpg);
+            background-size: cover;
+            background-position: center;
             padding: 2rem 1rem;
             border: 1.2rem solid rgba($color-grey-dark-2, 0.9);
             border-radius: 4rem;
@@ -115,6 +117,8 @@
                 border: .7rem solid rgba($color-grey-dark-2, 0.9);
             }
         }
+
+        & {-webkit-tap-highlight-color: rgba(0,0,0,0);}
 
         &--ekstraleague {
             animation: moveInLeft 1s ease-out;
@@ -239,20 +243,38 @@
     @media only screen and (max-width: $bp-medium) {
         width: 100%;
     }
-    
+
+    &__riders, &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.team__rider {
+    width: 100%;
+}
+
+.gp {
 
     &__info {
-        padding: 5rem 0 8rem;
-        background-image: linear-gradient(rgba($color-grey-dark-2, .9), rgba($color-grey-dark-2, .95)), url(../images/race.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        @media only screen and (max-width: $bp-small) {
-            padding: 2rem 0 5rem;
-        }
+        text-align: center;
     }
+}
 
-    &__name {
+.team__info, .gp__info{
+    padding: 5rem 0 8rem;
+    background-image: linear-gradient(rgba($color-grey-dark-2, .9), rgba($color-grey-dark-2, .95)), url(../images/race.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 2rem 0 5rem;
+    }
+}
+
+.team__name, .gp__name {
         font-size: 3rem;
         letter-spacing: .5rem;
         text-transform: uppercase;
@@ -271,9 +293,9 @@
         @media only screen and (max-width: $bp-small) {
             font-size: 2rem;
         }
-    }
+}
 
-    &__input {
+.team__input, .gp__input {
         display: inline-block;
         width: 70%;
         padding: 2rem 1rem;
@@ -333,50 +355,9 @@
                 font-size: 1.6rem;
             }
         }
-    }
-
-    &__riders {
-        padding: 8rem 0;
-        background-color: $color-grey-light-3;
-
-        @media only screen and (max-width: $bp-large) {
-            padding: 6rem 0;
-        }
-
-        @media only screen and (max-width: $bp-medium) {
-            padding: 5rem 0;
-        }
-
-        @media only screen and (max-width: $bp-small) {
-            padding: 3.5rem 0;
-        }
-
-    }
-
-    &__riders, &__info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
-.team__rider {
-    width: 100%;
-
-    &:not(:last-child) {
-        margin-bottom: 1.5rem;
-
-        @media only screen and (max-width: $bp-medium) {
-            margin-bottom: 1.2rem;
-        }
-
-        @media only screen and (max-width: $bp-small) {
-            margin-bottom: 1rem;
-        }
-    }
-
-    &__input {
+.team__rider__input, .gp__rider__input {
         display: block;
         width: 60%;
         padding: 2rem 3rem;
@@ -439,7 +420,7 @@
 
     }
 
-    &__label {
+.team__rider__label, .gp__rider__label {
         font-size: 1.5rem;
         display: block;
         color: $color-primary-dark;
@@ -461,29 +442,56 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
-    }
-
 }
 
-.legal {
-        font-size: 1.5rem;
-        text-align: center;
-        letter-spacing: .2rem;
-        color: $color-grey-light-1;
-        background-color: rgba($color-grey-dark-2, .95);
-        padding: 3rem 0;
-        line-height: 1.6;
+.team__riders, .gp__riders {
+        padding: 8rem 0;
+        background-color: $color-grey-light-3;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 6rem 0;
+        }
 
         @media only screen and (max-width: $bp-medium) {
-            font-size: 1.3rem;
+            padding: 5rem 0;
         }
 
         @media only screen and (max-width: $bp-small) {
-            font-size: 1.2rem;
-            padding: 2rem;
+            padding: 3.5rem 0;
         }
+}
 
-        .author {
-            color: $color-primary-light;
-        }
+.team__rider:not(:last-child), .gp__rider:not(:last-child) {
+    margin-bottom: 1.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 1.2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-bottom: 1rem;
+    }
+}
+
+.legal {
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: .2rem;
+    color: $color-grey-light-1;
+    background-color: rgba($color-grey-dark-2, .95);
+    padding: 3rem 0;
+    line-height: 1.6;
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 1.3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1.2rem;
+        padding: 2rem;
+    }
+
+    .author {
+        color: $color-primary-light;
+    }
 }
