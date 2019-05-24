@@ -4,7 +4,7 @@ var Promise = XlsxPopulate.Promise;
 function getWorkbook() {
     return new Promise(function (resolve, reject) {
         var req = new XMLHttpRequest();
-        var url = './gp.xlsx';
+        var url = './../../xlsx/gp.xlsx';
         req.open("GET", url, true);
         req.responseType = "arraybuffer";
         req.onreadystatechange = function () {
