@@ -99,8 +99,8 @@ body {
     font-size: 2rem;
     transition: all .2s ease-in;
     transform: scale(1);
-    outline: none;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; }
     @media only screen and (max-width: 56.25em) {
       .generator__btn {
         color: #ffffff;
@@ -113,6 +113,8 @@ body {
         font-size: 1.3rem;
         padding: 2rem 2.5rem;
         margin: 3rem auto; } }
+    .generator__btn:focus, .generator__btn:active {
+      outline: none; }
     .generator__btn:hover {
       color: #ffffff;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
