@@ -1,0 +1,301 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  75% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  75% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveInTop {
+  0% {
+    transform: translateX(-50%) translateY(-100%); }
+  100% {
+    transform: translateX(-50%) translateY(0); } }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(43, 203, 186, 0.9), rgba(15, 185, 177, 0.9)); }
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  overflow-x: hidden; }
+
+.generator {
+  background-color: #ffffff; }
+  .generator__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 2rem;
+    font-size: 3rem;
+    text-align: center;
+    background-image: linear-gradient(to right, #2bcbba, #0fb9b1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: .3rem;
+    line-height: 1.5; }
+    @media only screen and (max-width: 75rem) {
+      .generator__title {
+        font-size: 2.8rem;
+        padding: 6rem 2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .generator__title {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .generator__title {
+        font-size: 2rem;
+        padding: 4rem 1.5rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .generator__title {
+        font-size: 1.6rem;
+        padding: 4rem 1.5rem; } }
+  .generator__btn {
+    text-align: center;
+    display: block;
+    margin: 6rem auto;
+    background-image: linear-gradient(to right bottom, #2bcbba, #0fb9b1);
+    border: none;
+    border-radius: 4rem;
+    padding: 3rem 5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    color: #d1d8e0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    transition: all .2s ease-in;
+    transform: scale(1);
+    outline: none;
+    cursor: pointer; }
+    @media only screen and (max-width: 56.25em) {
+      .generator__btn {
+        color: #ffffff;
+        font-size: 1.5rem;
+        padding: 2rem 3rem;
+        margin: 4rem auto; } }
+    @media only screen and (max-width: 37.5em) {
+      .generator__btn {
+        color: #ffffff;
+        font-size: 1.3rem;
+        padding: 2rem 2.5rem;
+        margin: 3rem auto; } }
+    .generator__btn:hover {
+      color: #ffffff;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+      transform: scale(1.02); }
+
+.gp__info {
+  text-align: center;
+  padding: 5rem 0 8rem;
+  background-image: linear-gradient(rgba(75, 101, 132, 0.9), rgba(75, 101, 132, 0.95)), url(../../images/race.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media only screen and (max-width: 37.5em) {
+    .gp__info {
+      padding: 2rem 0 5rem; } }
+
+.gp__name {
+  font-size: 3rem;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  color: #d1d8e0;
+  font-weight: bold;
+  padding: 3rem 0; }
+  @media only screen and (max-width: 75rem) {
+    .gp__name {
+      font-size: 2.7rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .gp__name {
+      font-size: 2.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .gp__name {
+      font-size: 2rem; } }
+
+.gp__input {
+  display: inline-block;
+  width: 70%;
+  padding: 2rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #0fb9b1;
+  text-align: center;
+  font-size: 2.5rem;
+  border: 3px solid transparent;
+  border-radius: 5rem;
+  transition: all .2s ease-in; }
+  @media only screen and (max-width: 75rem) {
+    .gp__input {
+      width: 80%;
+      font-size: 2.2rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .gp__input {
+      width: 60%;
+      font-size: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .gp__input {
+      width: 80%;
+      font-size: 1.8rem;
+      padding: 1rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .gp__input {
+      font-size: 1.6rem; } }
+  .gp__input:focus {
+    outline: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    border: 3px solid #2bcbba; }
+  .gp__input::placeholder {
+    color: rgba(119, 140, 163, 0.3);
+    font-size: 2.5rem; }
+    @media only screen and (max-width: 75rem) {
+      .gp__input::placeholder {
+        font-size: 2.2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .gp__input::placeholder {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .gp__input::placeholder {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .gp__input::placeholder {
+        font-size: 1.6rem; } }
+
+.gp__riders {
+  padding: 8rem 0;
+  background-color: #dfe6e9; }
+  @media only screen and (max-width: 75rem) {
+    .gp__riders {
+      padding: 6rem 0; } }
+  @media only screen and (max-width: 56.25em) {
+    .gp__riders {
+      padding: 5rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .gp__riders {
+      padding: 3.5rem 0; } }
+
+.gp__rider__input {
+  display: block;
+  width: 60%;
+  padding: 2rem 3rem;
+  margin: 0 auto;
+  font-size: 2.3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #4b6584;
+  border: 2px solid #a5b1c2;
+  transition: all .2s ease-in; }
+  @media only screen and (max-width: 75rem) {
+    .gp__rider__input {
+      width: 70%;
+      padding: 1.8rem 3rem;
+      font-size: 2rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .gp__rider__input {
+      font-size: 1.8rem;
+      text-align: center;
+      width: 60%;
+      padding: 1.5rem 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .gp__rider__input {
+      font-size: 1.6rem;
+      width: 70%;
+      padding: 1.3rem 3rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .gp__rider__input {
+      font-size: 1.4rem;
+      width: 70%;
+      padding: 1rem 3rem; } }
+  .gp__rider__input:focus {
+    outline: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    border: 2px solid #0fb9b1; }
+  .gp__rider__input::placeholder {
+    color: rgba(119, 140, 163, 0.5);
+    font-size: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .gp__rider__input::placeholder {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .gp__rider__input::placeholder {
+        font-size: 1.6rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .gp__rider__input::placeholder {
+        font-size: 1.4rem; } }
+
+.gp__rider__label {
+  font-size: 1.5rem;
+  display: block;
+  color: #0fb9b1;
+  font-weight: bold;
+  margin-top: .8rem;
+  text-align: center;
+  transition: all .3s; }
+  @media only screen and (max-width: 56.25em) {
+    .gp__rider__label {
+      font-size: 1.3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .gp__rider__label {
+      font-size: 1.2rem; } }
+
+.gp__rider__input:placeholder-shown + .gp__rider__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.gp__rider:not(:last-child) {
+  margin-bottom: 1.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .gp__rider:not(:last-child) {
+      margin-bottom: 1.2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .gp__rider:not(:last-child) {
+      margin-bottom: 1rem; } }
+
+.legal {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: .2rem;
+  color: #d1d8e0;
+  background-color: rgba(75, 101, 132, 0.95);
+  padding: 3rem 0;
+  line-height: 1.6; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      font-size: 1.3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .legal {
+      font-size: 1.2rem;
+      padding: 2rem; } }
+  .legal .author {
+    color: #2bcbba; }
