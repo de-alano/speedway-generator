@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://github.com/de-alano/speedway-generator#readme",
+  "homepage": "https://github.com/de-alano/speedway-generator",
   "scripts": {
-    "scss": "node-sass sass/pages/home/main.scss --output dist/pages/home/ && node-sass sass/pages/ekstraleague/main.scss --output dist/pages/ekstraleague/ && node-sass sass/pages/firstleague/main.scss --output dist/pages/firstleague/ && node-sass sass/pages/gp/main.scss --output dist/pages/gp/ -w",
-    "deploy": "gh-pages -d dist/pages/home"
+    "scss": "node-sass sass/pages/home/main.scss --output dist/ && node-sass sass/pages/ekstraleague/main.scss --output dist/pages/ekstraleague/ && node-sass sass/pages/firstleague/main.scss --output dist/pages/firstleague/ && node-sass sass/pages/gp/main.scss --output dist/pages/gp/ -w",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
