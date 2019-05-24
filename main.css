@@ -122,14 +122,14 @@ body {
   height: 100vh;
   height: calc(var(--vh, 1vh) *100);
   width: 100%;
-  background-image: url(../../images/bg3.jpg);
+  background-image: url(./images/bg3.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
   overflow: hidden; }
   @media only screen and (max-width: 37.5em) {
     .header {
-      background-image: url(../../images/bg.jpg); } }
+      background-image: url(./images/bg.jpg); } }
   .header__text {
     position: absolute;
     width: 100%;
@@ -193,7 +193,7 @@ body {
     text-decoration: none;
     cursor: pointer;
     text-align: center;
-    background-image: linear-gradient(rgba(75, 101, 132, 0.9), rgba(75, 101, 132, 0.95)), url(../../images/race.jpg);
+    background-image: linear-gradient(rgba(75, 101, 132, 0.9), rgba(75, 101, 132, 0.95)), url(./images/race.jpg);
     background-size: cover;
     background-position: center;
     padding: 2rem 1rem;
