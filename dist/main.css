@@ -234,3 +234,21 @@ body {
     color: #ffffff;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
     transform: scale(1.02); }
+
+.loader {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #2bcbba;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity .5s ease; }
+
+.loader-finish {
+  opacity: 0;
+  pointer-events: none; }

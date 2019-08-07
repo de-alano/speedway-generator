@@ -1,3 +1,23 @@
+// Form validation function
+// function validateForm() {
+//     // Check if a input value is correct
+//     const re = /^[a-zA-Z-' ]+$/;
+//     const allInputs = [...document.getElementsByTagName('input')];
+
+//     allInputs.forEach(input => {
+//         if (re.test(input.value)) {
+//             input.style.border = "2px solid #20bf6b";
+//             return false;
+//         } else {
+//             input.style.border = "2px solid red";
+
+//         }
+
+//         return true;
+
+//     });
+
+// }
 
 var Promise = XlsxPopulate.Promise;
 
@@ -74,6 +94,7 @@ function generate(type) {
 
 function generateBlob(e) {
     e.preventDefault();
+
     return generate()
         .then(function (blob) {
             var url = window.URL.createObjectURL(blob);
@@ -86,5 +107,6 @@ function generateBlob(e) {
             document.body.removeChild(a);
         })
 }
+
 
 document.querySelector('.generator__form').addEventListener('submit', generateBlob);
